@@ -4,6 +4,6 @@ function(input, output) {
   })
 
   output$plotplot <- renderPlot({
-  plot(input$obs)
+  plot(input$obs, main = "plot")
   })
 }

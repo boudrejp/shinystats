@@ -1,11 +1,13 @@
-ui <- fluidPage(
-  sidebarLayout(
-    sidebarPanel(
-      sliderInput("obs", "Number of observations:", min = 10, max = 500, value = 100)
+ui <- dashboardPage(
+  dashboardHeader(title = "A sample app"),
+  dashboardSidebar(),
+  dashboardBody(
+    fluidRow(
+      box(sliderInput("obs", "Number of observations:", min = 10, max = 500, value = 100))
     ),
-    mainPanel(
-      plotOutput("distPlot"),
-      plotOutput("plotplot")
+    fluidRow(
+      box(plotOutput("distPlot")),
+      box(plotOutput("plotplot"))
     )
   )
 )
