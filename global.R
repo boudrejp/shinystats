@@ -1,1 +1,1 @@
-library(shinydashboard)
+library(shiny)
