@@ -3,6 +3,9 @@ ui <- fluidPage(
     sidebarPanel(
       sliderInput("obs", "Number of observations:", min = 10, max = 500, value = 100)
     ),
-    mainPanel(plotOutput("distPlot"), main = "Histogram of randomly generated data")
+    mainPanel(
+      plotOutput("distPlot"),
+      plotOutput("plotplot")
+    )
   )
 )
